@@ -20,6 +20,9 @@ messagesForChannelId: channelId queryParams: associations
 		response.
 	^ response isSuccess 
 		ifTrue: [ | messages |
+			
+			self waitRateLimit: response.
+			
 			messages := DSModelJsonMapping 
 				read: #CollectionOfMessages 
 				withMapping: #collectionOfMessagesMappingFor:
