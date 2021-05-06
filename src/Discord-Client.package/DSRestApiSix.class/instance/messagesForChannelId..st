@@ -4,8 +4,11 @@ messagesForChannelId: channelId
 	this endpoint requires the 'READ_MESSAGES' permission to be present on the current user. 
 	Returns an array of message objects on success.
 	See https://discordapp.com/developers/docs/resources/channel#get-channel-messages"
-	| url response |
+	| url associations response |
 	url := self channelMessagesUrlForId: channelId.
+	associations := Dictionary new.
+	associations at: 'limit' put: '100'.
+	url queryAddAll: associations.
 	response := (self newZnClientAuthenticated)
 		url: url;
 		get;

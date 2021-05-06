@@ -13,6 +13,7 @@ messagesForChannelId: channelId queryParams: associations
 	See https://discordapp.com/developers/docs/resources/channel#get-channel-messages"
 	| url response |
 	url := self channelMessagesUrlForId: channelId.
+	associations at: 'limit' put: '100'.
 	url queryAddAll: associations.
 	response := (self newZnClientAuthenticated)
 		url: url;
