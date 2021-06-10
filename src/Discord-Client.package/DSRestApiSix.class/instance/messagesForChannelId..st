@@ -13,6 +13,17 @@ messagesForChannelId: channelId
 		url: url;
 		get;
 		response.
+	response isSuccess ifFalse: [
+		'Error while getting response, retrying once in 10 seconds.' traceCr.
+		response contents printString traceCr.
+		"Retry once after 10 seconds for sporadic errors."
+		Delay forSeconds: 10.
+		response := (self newZnClientAuthenticated)
+		url: url;
+		get;
+		response. 
+	].
+
 	^ response isSuccess 
 		ifTrue: [ | messages |
 			
