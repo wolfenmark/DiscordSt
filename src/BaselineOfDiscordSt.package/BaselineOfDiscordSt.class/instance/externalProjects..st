@@ -4,8 +4,8 @@ externalProjects: spec
 		spec    
             baseline: 'Fuel' with: [ 
 				spec 
-					repository: 'github://theseion/Fuel:master/repository';
-					loads: 'default' ];
+					repository: 'github://theseion/Fuel:3.0.4/repository';
+					loads: 'CoreWithExtras' ];
 			baseline: 'NeoJSON' with: [
 				spec repository: 'github://svenvc/NeoJSON:master/repository' ];
 			baseline: 'Brick' with: [ 
