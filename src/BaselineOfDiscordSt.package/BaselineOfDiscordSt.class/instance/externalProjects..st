@@ -2,10 +2,6 @@ private
 externalProjects: spec
 	spec for: #'common' do: [
 		spec    
-            baseline: 'Fuel' with: [ 
-				spec 
-					repository: 'github://theseion/Fuel:3.0.4/repository';
-					loads: 'CoreWithExtras' ];
 			baseline: 'NeoJSON' with: [
 				spec repository: 'github://svenvc/NeoJSON:master/repository' ];
 			baseline: 'Brick' with: [ 
@@ -19,6 +15,10 @@ externalProjects: spec
 	].
 	spec for: #'pharo6.x' do: [
 		spec
+			baseline: 'Fuel' with: [ 
+				spec 
+					repository: 'github://theseion/Fuel:3.0.4/repository';
+					loads: 'CoreWithExtras' ];
 			configuration: 'ZincHTTPComponents' with: [ 
 				spec
 					repository: 'http://smalltalkhub.com/mc/SvenVanCaekenberghe/ZincHTTPComponents/main/';
@@ -27,6 +27,10 @@ externalProjects: spec
 	].
 	spec for: #'pharo7.x' do: [
 		spec
+			baseline: 'Fuel' with: [ 
+				spec 
+					repository: 'github://theseion/Fuel:3.0.4/repository';
+					loads: 'CoreWithExtras' ];
 			configuration: 'ZincHTTPComponents' with: [ 
 				spec
 					repository: 'http://smalltalkhub.com/mc/SvenVanCaekenberghe/ZincHTTPComponents/main/';
