@@ -18,7 +18,7 @@ corePackages: spec
 			package: #'Discord-Client' with: [
 				spec requires: #( 
 					#'Discord-Announcements' #'Discord-Core' #'Discord-Gateway' 
-					#'Fuel' #'ExternalVolatileStore' ). ];
+					#'ExternalVolatileStore' ). ];
 			package: #'Discord-Client-Tests' with: [
 				spec requires: #( #'Discord-Client' #'Discord-Core-Tests' #'Discord-Gateway-Tests' ). ];
 
@@ -27,3 +27,15 @@ corePackages: spec
 			package: #'Discord-Gateway-Tests' with: [
 				spec requires: #( #'Discord-Gateway' #'Discord-Core-Tests' ). ]
 	].
+	spec for: #'pharo:6.x' do: [ 
+		spec package: #'Discord-Client' with: [
+				spec requires: #( 
+					#'Discord-Announcements' #'Discord-Core' #'Discord-Gateway' 
+					#Fuel #'ExternalVolatileStore' ). ]
+ 	].
+	spec for: #'pharo:7.x' do: [ 
+		spec package: #'Discord-Client' with: [
+				spec requires: #( 
+					#'Discord-Announcements' #'Discord-Core' #'Discord-Gateway' 
+					#Fuel #'ExternalVolatileStore' ). ]
+ 	].
