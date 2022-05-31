@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "MarcoRaglianti 5/31/2022 18:11",
+	"super" : "DSObject",
+	"category" : "Discord-Core-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"restApi",
+		"guildId",
+		"messageId",
+		"channelId"
+	],
+	"name" : "DSMessageReference",
+	"type" : "normal"
+}
