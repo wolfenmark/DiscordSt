@@ -18,11 +18,14 @@ messageMappingFor: aNeoJSONMapper
 			mapping mapAccessor: #nonce.
 			mapping mapAccessor: #isPinnedInChannel to: #pinned.
 			mapping mapAccessor: #webhookId to: #webhook_id.
-			mapping mapAccessor: #type ].
+			mapping mapAccessor: #type.
+			(mapping mapAccessor: #messageReference to: #message_reference) valueSchema: DSMessageReference.
+			(mapping mapAccessor: #referencedMessage to: #referenced_message) valueSchema: DSMessage ].
 	self 
 		userMappingFor: aNeoJSONMapper;
 		dateAndTimeMappingFor: aNeoJSONMapper;
 		collectionOfUsersMappingFor: aNeoJSONMapper;
 		collectionOfAttachmentsMappingFor: aNeoJSONMapper;
 		collectionOfEmbedsMappingFor: aNeoJSONMapper;
-		collectionOfReactionsMappingFor: aNeoJSONMapper.
+		collectionOfReactionsMappingFor: aNeoJSONMapper;
+		messageReferenceMappingFor: aNeoJSONMapper.
