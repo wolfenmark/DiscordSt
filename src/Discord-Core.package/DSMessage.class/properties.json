@@ -23,7 +23,9 @@
 		"webhookId",
 		"type",
 		"mentionRoleIds",
-		"isPinnedInChannel"
+		"isPinnedInChannel",
+		"messageReference",
+		"referencedMessage"
 	],
 	"name" : "DSMessage",
 	"type" : "normal"
