@@ -2,6 +2,7 @@ mapping - message
 messageMappingFor: aNeoJSONMapper
 	aNeoJSONMapper
 		for: DSMessage do: [ :mapping |
+			mapping allowNil.
 	      mapping mapAccessor: #id.
 	      mapping mapAccessor: #channelId to: #channel_id.
 	      (mapping mapAccessor: #author) valueSchema: DSUser.
