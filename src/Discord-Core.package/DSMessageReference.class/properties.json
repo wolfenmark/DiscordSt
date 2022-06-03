@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"restApi",
 		"guildId",
 		"messageId",
 		"channelId"
