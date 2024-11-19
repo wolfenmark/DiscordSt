@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MarcoRaglianti 11/19/2024 17:47",
+	"super" : "DSChannelType",
+	"category" : "Discord-Core-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DSChannelGuildAnnouncementType",
+	"type" : "normal"
+}
